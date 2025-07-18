@@ -1,0 +1,562 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Arabic:wght@400;700&family=Amiri:wght@400;700;900&family=Cairo:wght@400;600;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', 'Noto Serif Arabic', serif;
+    background: linear-gradient(135deg, #f8ede3 0%, #e9d4b5 100%);
+    min-height: 100vh;
+    direction: rtl;
+    text-align: right;
+    color: #6b4e31;
+}
+
+/* شريط التنقل */
+.navbar {
+    background-color: #6b4e31;
+    color: white;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(107, 78, 49, 0.3);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-home {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-family: 'Cairo', sans-serif;
+}
+
+.nav-home:hover {
+    color: #e9d4b5;
+}
+
+.nav-icon {
+    font-size: 24px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-family: 'Cairo', sans-serif;
+}
+
+.nav-link:hover {
+    color: #e9d4b5;
+}
+
+/* الحاوي الرئيسي */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* إدارة الصفحات */
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+/* الصفحة الرئيسية */
+.header-section {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.bot-icon {
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+.main-title {
+    font-size: 60px;
+    font-weight: 900;
+    color: #6b4e31;
+    font-family: 'Amiri', serif;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 24px;
+    color: #6b4e31;
+    font-weight: 600;
+}
+
+/* شبكة البطاقات */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.policy-card {
+    background-color: #e9d4b5;
+    border: 2px solid #b88d61;
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(107, 78, 49, 0.2);
+    font-family: 'Cairo', sans-serif;
+}
+
+.policy-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(107, 78, 49, 0.3);
+}
+
+.card-icon {
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #6b4e31;
+    margin-bottom: 15px;
+}
+
+.card-description {
+    font-size: 18px;
+    color: #6b4e31;
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+/* قسم الترحيب */
+.welcome-section {
+    text-align: center;
+}
+
+.welcome-card {
+    background-color: #f8ede3;
+    border: 1px solid #b88d61;
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.welcome-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #6b4e31;
+    margin-bottom: 20px;
+}
+
+.welcome-text {
+    font-size: 18px;
+    color: #6b4e31;
+    line-height: 1.8;
+}
+
+/* صفحات المحتوى */
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-icon {
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+.page-title {
+    font-size: 50px;
+    font-weight: 900;
+    color: #6b4e31;
+    font-family: 'Amiri', serif;
+    margin-bottom: 15px;
+}
+
+.page-date {
+    font-size: 20px;
+    color: #6b4e31;
+    opacity: 0.8;
+}
+
+/* بطاقة المحتوى */
+.content-card {
+    background-color: #f8ede3;
+    border: 2px solid #b88d61;
+    border-radius: 20px;
+    padding: 50px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 8px rgba(107, 78, 49, 0.2);
+}
+
+.content-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.content-section {
+    background: transparent;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.section-icon {
+    font-size: 24px;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #6b4e31;
+}
+
+.section-text {
+    font-size: 18px;
+    color: #6b4e31;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* الشبكات الفرعية */
+.subsection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.subsection {
+    background-color: #e9d4b5;
+    border: 1px solid #b88d61;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.subsection-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #6b4e31;
+    margin-bottom: 15px;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+}
+
+.info-list li {
+    font-size: 16px;
+    color: #6b4e31;
+    margin-bottom: 8px;
+    padding-right: 20px;
+    position: relative;
+}
+
+.info-list li::before {
+    content: "•";
+    color: #6b4e31;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+}
+
+/* شبكة الاستخدام */
+.usage-grid {
+    display: grid;
+    gap: 15px;
+}
+
+.usage-item {
+    background-color: #e9d4b5;
+    border: 1px solid #b88d61;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 16px;
+    color: #6b4e31;
+}
+
+/* التدابير الأمنية */
+.security-measures {
+    background-color: #e9d4b5;
+    border: 1px solid #b88d61;
+    border-radius: 10px;
+    padding: 25px;
+    margin-top: 20px;
+}
+
+/* شبكة الحقوق */
+.rights-grid {
+    display: grid;
+    gap: 15px;
+}
+
+.right-item {
+    background-color: #e9d4b5;
+    border: 1px solid #b88d61;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.right-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #6b4e31;
+    margin-bottom: 10px;
+}
+
+.right-item p {
+    font-size: 16px;
+    color: #6b4e31;
+}
+
+/* معلومات الاتصال */
+.contact-info {
+    background-color: #e9d4b5;
+    border: 1px solid #b88d61;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+/* الأنشطة المحظورة */
+.prohibited-activities {
+    background-color: #e9d4b5;
+    border: 1px solid #b88d61;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+/* شبكة الخدمات */
+.services-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.service-item {
+    background-color: #e9d4b5;
+    border: 1px solid #b88d61;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.service-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #6b4e31;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 16px;
+    color: #6b4e31;
+    line-height: 1.6;
+}
+
+/* شبكة المسؤولية */
+.responsibility-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.responsibility-item {
+    background-color: #e9d4b5;
+    border: 1px solid #b88d61;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.responsibility-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #6b4e31;
+    margin-bottom: 15px;
+}
+
+.responsibility-item p {
+    font-size: 16px;
+    color: #6b4e31;
+    line-height: 1.6;
+}
+
+/* معلومات إضافية */
+.termination-info,
+.modification-info,
+.law-info,
+.support-info {
+    background-color: #e9d4b5;
+    border: 1px solid #b88d61;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+/* زر العودة */
+.back-button-container {
+    text-align: center;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #6b4e31;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Cairo', sans-serif;
+}
+
+.back-button:hover {
+    background-color: #5a3d26;
+}
+
+/* الاستجابة للأجهزة المحمولة */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 15px;
+    }
+    
+    .main-title {
+        font-size: 40px;
+    }
+    
+    .page-title {
+        font-size: 35px;
+    }
+    
+    .bot-icon,
+    .page-icon {
+        font-size: 60px;
+    }
+    
+    .card-icon {
+        font-size: 60px;
+    }
+    
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .policy-card {
+        padding: 30px;
+    }
+    
+    .card-title {
+        font-size: 24px;
+    }
+    
+    .card-description {
+        font-size: 16px;
+    }
+    
+    .content-card {
+        padding: 30px 20px;
+    }
+    
+    .section-title {
+        font-size: 26px;
+    }
+    
+    .section-text {
+        font-size: 16px;
+    }
+    
+    .subsection-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .nav-links {
+        gap: 20px;
+    }
+    
+    .welcome-card {
+        padding: 30px 20px;
+    }
+    
+    .welcome-title {
+        font-size: 24px;
+    }
+    
+    .welcome-text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 32px;
+    }
+    
+    .page-title {
+        font-size: 28px;
+    }
+    
+    .subtitle {
+        font-size: 18px;
+    }
+    
+    .policy-card {
+        padding: 20px;
+    }
+    
+    .content-card {
+        padding: 20px 15px;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

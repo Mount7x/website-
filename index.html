@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتفاقيات بوت سين جيم</title>
+    <meta name="description" content="اتفاقيات الخصوصية وشروط الاستخدام لبوت سين جيم">
+    <meta name="keywords" content="ديسكورد, بوت, اتفاقية, خصوصية, شروط, استخدام">
+    <meta name="author" content="فريق البوت">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Arabic:wght@400;700&family=Amiri:wght@400;700;900&family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <button onclick="showPage('home')" class="nav-home">
+                <span class="nav-icon">🏠</span>
+                <span>الرئيسية</span>
+            </button>
+            <div class="nav-links">
+                <button onclick="showPage('privacy')" class="nav-link">اتفاقية الخصوصية</button>
+                <button onclick="showPage('terms')" class="nav-link">شروط الاستخدام</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- الصفحة الرئيسية -->
+    <div id="home-page" class="page active">
+        <div class="container">
+            <div class="header-section">
+                <div class="bot-icon">🤖</div>
+                <h1 class="main-title">بوت سين جيم</h1>
+                <p class="subtitle">اتفاقيات الخصوصية وشروط الاستخدام</p>
+            </div>
+
+            <div class="cards-grid">
+                <button onclick="showPage('privacy')" class="policy-card">
+                    <div class="card-icon">🛡️</div>
+                    <h2 class="card-title">اتفاقية الخصوصية</h2>
+                    <p class="card-description">اطلع على سياسة الخصوصية وكيفية حماية بياناتك</p>
+                </button>
+
+                <button onclick="showPage('terms')" class="policy-card">
+                    <div class="card-icon">📄</div>
+                    <h2 class="card-title">شروط الاستخدام</h2>
+                    <p class="card-description">تعرف على الشروط والأحكام الخاصة بالاستخدام</p>
+                </button>
+            </div>
+
+            <div class="welcome-section">
+                <div class="welcome-card">
+                    <h3 class="welcome-title">مرحباً بك في موقع اتفاقيات البوت</h3>
+                    <p class="welcome-text">
+                        هذا الموقع يحتوي على جميع الاتفاقيات والشروط اللازمة لاستخدام بوت سين جيم.
+                        يرجى قراءة جميع الاتفاقيات بعناية قبل البدء في استخدام الخدمة.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- صفحة اتفاقية الخصوصية -->
+    <div id="privacy-page" class="page">
+        <div class="container">
+            <div class="page-header">
+                <div class="page-icon">🛡️</div>
+                <h1 class="page-title">اتفاقية الخصوصية</h1>
+                <p class="page-date">آخر تحديث: <span id="current-date"></span></p>
+            </div>
+
+            <div class="content-card">
+                <div class="content-sections">
+                    <section class="content-section">
+                        <div class="section-header">
+                            <span class="section-icon">👁️</span>
+                            <h2 class="section-title">نظرة عامة</h2>
+                        </div>
+                        <p class="section-text">
+                            نحن نقدر خصوصيتك ونلتزم بحماية معلوماتك الشخصية. تشرح هذه الاتفاقية كيفية جمع واستخدام وحماية البيانات التي تقدمها عند استخدام بوت سين جيم الخاص بنا.
+                        </p>
+                    </section>
+
+                    <section class="content-section">
+                        <div class="section-header">
+                            <span class="section-icon">🗄️</span>
+                            <h2 class="section-title">البيانات التي نجمعها</h2>
+                        </div>
+                        <div class="subsection-grid">
+                            <div class="subsection">
+                                <h3 class="subsection-title">معلومات المستخدم</h3>
+                                <ul class="info-list">
+                                    <li>معرف المستخدم في الديسكورد</li>
+                                    <li>اسم المستخدم والصورة الشخصية</li>
+                                    <li>الأوامر التي يتم تنفيذها</li>
+                                    <li>معرف السيرفر والقناة</li>
+                                </ul>
+                            </div>
+                            <div class="subsection">
+                                <h3 class="subsection-title">بيانات الاستخدام</h3>
+                                <ul class="info-list">
+                                    <li>تاريخ ووقت استخدام الأوامر</li>
+                                    <li>إحصائيات الاستخدام</li>
+                                    <li>سجلات الأخطاء والمشاكل التقنية</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <div class="section-header">
+                            <span class="section-icon">🔒</span>
+                            <h2 class="section-title">كيف نستخدم البيانات</h2>
+                        </div>
+                        <div class="usage-grid">
+                            <div class="usage-item">
+                                <strong>تحسين الخدمة:</strong> نستخدم البيانات لتحسين وظائف البوت وإصلاح الأخطاء
+                            </div>
+                            <div class="usage-item">
+                                <strong>تقديم الدعم:</strong> نساعدك في حل المشاكل التقنية والاستفسارات
+                            </div>
+                            <div class="usage-item">
+                                <strong>الإحصائيات:</strong> نقوم بإنشاء تقارير إحصائية مجهولة الهوية
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <div class="section-header">
+                            <span class="section-icon">🔐</span>
+                            <h2 class="section-title">حماية البيانات</h2>
+                        </div>
+                        <p class="section-text">
+                            نحن نتخذ تدابير أمنية صارمة لحماية بياناتك من الوصول غير المصرح به أو الاستخدام غير القانوني. جميع البيانات المحفوظة مشفرة ومحمية بأحدث التقنيات الأمنية.
+                        </p>
+                        <div class="security-measures">
+                            <h3 class="subsection-title">التدابير الأمنية</h3>
+                            <ul class="info-list">
+                                <li>تشفير البيانات أثناء النقل والتخزين</li>
+                                <li>وصول محدود للبيانات من قبل الفريق المخول فقط</li>
+                                <li>مراقبة مستمرة للأنشطة المشبوهة</li>
+                                <li>نسخ احتياطية آمنة ومنتظمة</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <div class="section-header">
+                            <span class="section-icon">⚖️</span>
+                            <h2 class="section-title">حقوقك</h2>
+                        </div>
+                        <div class="rights-grid">
+                            <div class="right-item">
+                                <h3 class="right-title">الحق في الوصول</h3>
+                                <p>يمكنك طلب معرفة البيانات التي نحتفظ بها عنك</p>
+                            </div>
+                            <div class="right-item">
+                                <h3 class="right-title">الحق في الحذف</h3>
+                                <p>يمكنك طلب حذف بياناتك الشخصية من سجلاتنا</p>
+                            </div>
+                            <div class="right-item">
+                                <h3 class="right-title">الحق في التصحيح</h3>
+                                <p>يمكنك طلب تصحيح أي معلومات خاطئة</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <div class="section-header">
+                            <span class="section-icon">📞</span>
+                            <h2 class="section-title">التواصل معنا</h2>
+                        </div>
+                        <div class="contact-info">
+                            <p class="section-text">
+                                إذا كان لديك أي استفسارات حول اتفاقية الخصوصية أو تريد ممارسة حقوقك،
+                                يمكنك التواصل معنا عبر الديسكورد أو البريد الإلكتروني.
+                            </p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="back-button-container">
+                <button onclick="showPage('home')" class="back-button">
+                    <span>←</span>
+                    العودة للرئيسية
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- صفحة شروط الاستخدام -->
+    <div id="terms-page" class="page">
+        <div class="container">
+            <div class="page-header">
+                <div class="page-icon">📄</div>
+                <h1 class="page-title">شروط الاستخدام</h1>
+                <p class="page-date">آخر تحديث: <span id="current-date-terms"></span></p>
+            </div>
+
+            <div class="content-card">
+                <div class="content-sections">
+                    <section class="content-section">
+                        <div class="section-header">
+                            <span class="section-icon">👥</span>
+                            <h2 class="section-title">قبول الشروط</h2>
+                        </div>
+                        <p class="section-text">
+                            باستخدام بوت سين جيم الخاص بنا، فإنك توافق على الالتزام بهذه الشروط والأحكام.
+                            إذا لم توافق على هذه الشروط، يرجى عدم استخدام الخدمة.
+                        </p>
+                    </section>
+
+                    <section class="content-section">
+                        <div class="section-header">
+                            <span class="section-icon">⚙️</span>
+                            <h2 class="section-title">الاستخدام المسموح</h2>
+                        </div>
+                        <div class="subsection-grid">
+                            <div class="subsection">
+                                <h3 class="subsection-title">الاستخدام المشروع</h3>
+                                <ul class="info-list">
+                                    <li>استخدام البوت للأغراض المشروعة فقط</li>
+                                    <li>احترام حقوق المستخدمين الآخرين</li>
+                                    <li>الالتزام بشروط خدمة الديسكورد</li>
+                                    <li>عدم محاولة اختراق أو تعطيل الخدمة</li>
+                                </ul>
+                            </div>
+                            <div class="subsection">
+                                <h3 class="subsection-title">الاستخدام في السيرفرات</h3>
+                                <ul class="info-list">
+                                    <li>يجب الحصول على إذن من مدير السيرفر</li>
+                                    <li>احترام قواعد السيرفر المحددة</li>
+                                    <li>عدم استخدام البوت للإزعاج أو التحرش</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <div class="section-header">
+                            <span class="section-icon">⚠️</span>
+                            <h2 class="section-title">الاستخدام المحظور</h2>
+                        </div>
+                        <div class="prohibited-activities">
+                            <h3 class="subsection-title">الأنشطة المحظورة</h3>
+                            <ul class="info-list">
+                                <li>إرسال محتوى مسيء أو غير قانوني</li>
+                                <li>محاولة اختراق أو تعطيل البوت</li>
+                                <li>استخدام البوت للأنشطة الإجرامية</li>
+                                <li>انتهاك حقوق الملكية الفكرية</li>
+                                <li>إنشاء حسابات وهمية أو متعددة</li>
+                                <li>استخدام البوت للتحرش أو التنمر</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <div class="section-header">
+                            <span class="section-icon">🔧</span>
+                            <h2 class="section-title">الخدمات المقدمة</h2>
+                        </div>
+                        <div class="services-grid">
+                            <div class="service-item">
+                                <h3 class="service-title">توفر الخدمة</h3>
+                                <p>
+                                    نحن نسعى لتوفير الخدمة على مدار الساعة، لكن لا نضمن عدم انقطاع الخدمة.
+                                    قد تحدث انقطاعات مؤقتة للصيانة أو التطوير.
+                                </p>
+                            </div>
+                            <div class="service-item">
+                                <h3 class="service-title">التحديثات والتطوير</h3>
+                                <p>
+                                    نحتفظ بالحق في تحديث وتطوير البوت في أي وقت.
+                                    قد تؤثر التحديثات على الوظائف الحالية أو تضيف وظائف جديدة.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <div class="section-header">
+                            <span class="section-icon">🛡️</span>
+                            <h2 class="section-title">المسؤولية</h2>
+                        </div>
+                        <div class="responsibility-grid">
+                            <div class="responsibility-item">
+                                <h3 class="responsibility-title">مسؤولية المستخدم</h3>
+                                <ul class="info-list">
+                                    <li>أنت مسؤول عن جميع الأنشطة التي تتم باستخدام حسابك</li>
+                                    <li>يجب الحفاظ على سرية معلومات حسابك</li>
+                                    <li>الإبلاغ عن أي استخدام غير مصرح به</li>
+                                </ul>
+                            </div>
+                            <div class="responsibility-item">
+                                <h3 class="responsibility-title">مسؤوليتنا</h3>
+                                <p>
+                                    نحن غير مسؤولين عن أي أضرار مباشرة أو غير مباشرة قد تنتج عن استخدام البوت.
+                                    نقدم الخدمة "كما هي" دون ضمانات صريحة أو ضمنية.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <div class="section-header">
+                            <span class="section-icon">🚪</span>
+                            <h2 class="section-title">إنهاء الخدمة</h2>
+                        </div>
+                        <div class="termination-info">
+                            <p class="section-text">
+                                نحتفظ بالحق في إنهاء أو تعليق وصولك للخدمة في أي وقت دون إشعار مسبق،
+                                خاصة في حالة انتهاك هذه الشروط. يمكنك أيضاً إيقاف استخدام الخدمة في أي وقت.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <div class="section-header">
+                            <span class="section-icon">📝</span>
+                            <h2 class="section-title">تعديل الشروط</h2>
+                        </div>
+                        <div class="modification-info">
+                            <p class="section-text">
+                                نحتفظ بالحق في تعديل هذه الشروط في أي وقت. سيتم إشعارك بالتغييرات الجوهرية
+                                عبر الديسكورد أو موقعنا الإلكتروني. استمرارك في استخدام الخدمة بعد التعديل
+                                يعني موافقتك على الشروط الجديدة.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <div class="section-header">
+                            <span class="section-icon">⚖️</span>
+                            <h2 class="section-title">القانون المطبق</h2>
+                        </div>
+                        <div class="law-info">
+                            <p class="section-text">
+                                هذه الشروط محكومة بالقوانين المحلية المطبقة. أي نزاع يُحل وفقاً للقوانين
+                                والأنظمة المعمول بها في البلد المعني.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <div class="section-header">
+                            <span class="section-icon">📞</span>
+                            <h2 class="section-title">التواصل والدعم</h2>
+                        </div>
+                        <div class="support-info">
+                            <p class="section-text">
+                                إذا كان لديك أي استفسارات حول شروط الاستخدام أو تحتاج للدعم التقني،
+                                يمكنك التواصل معنا عبر الديسكورد أو البريد الإلكتروني. نحن هنا لمساعدتك.
+                            </p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="back-button-container">
+                <button onclick="showPage('home')" class="back-button">
+                    <span>←</span>
+                    العودة للرئيسية
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // تحديد التاريخ الحالي
+        function setCurrentDate() {
+            const now = new Date();
+            const arabicDate = now.toLocaleDateString('ar-SA');
+            document.getElementById('current-date').textContent = arabicDate;
+            document.getElementById('current-date-terms').textContent = arabicDate;
+        }
+
+        // إظهار الصفحة المحددة
+        function showPage(pageId) {
+            // إخفاء جميع الصفحات
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            // إظهار الصفحة المحددة
+            document.getElementById(pageId + '-page').classList.add('active');
+            
+            // التمرير إلى أعلى الصفحة
+            window.scrollTo(0, 0);
+        }
+
+        // تشغيل الكود عند تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', function() {
+            setCurrentDate();
+        });
+    </script>
+</body>
+</html>
